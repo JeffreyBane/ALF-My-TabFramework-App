@@ -1,0 +1,10 @@
+<div class="d-none d-sm-block">
+    <nav mat-tab-nav-bar style="width: 100%">
+        <a mat-tab-link   *ngFor="let tab of _coreService.tabs; let index = index"
+            [routerLink]="tab.routerLink" routerLinkActive="active" #rla="routerLinkActive" [active]="rla.isActive" >
+                <mat-icon>{{ tab.matIcon }}</mat-icon>&nbsp;<span class="aligned-with-icon" style="margin-right: 125px;">
+                    {{ tab.label }}</span>
+            <span class="aligned-with-icon"><a href="javascript:void(0)" *ngIf="index > 0" (click)="deleteTab(index, $event)"><mat-icon>clear</mat-icon></a></span>
+        </a>
+    </nav>
+</div>

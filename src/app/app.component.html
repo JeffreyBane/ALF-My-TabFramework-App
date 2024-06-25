@@ -1,0 +1,14 @@
+<my-header></my-header>
+<my-nav></my-nav>
+
+<div class="outlet-wrapper" [@simpleFadeAnimation]="getState()">
+  <router-outlet></router-outlet>
+</div>
+
+<mat-card>
+  <mat-card-content>
+    <button (click)="addSearch()" mat-raised-button type="button" class="big-button">Add New Search Search Results Tab</button>
+    <button (click)="addExistingSearch()" mat-raised-button type="button" class="big-button">Add Duplicate Search Results Tab 3</button>
+    <button (click)="addSettings()" mat-raised-button type="button" class="big-button">Add New Settings Tab</button>
+  </mat-card-content>
+</mat-card>
